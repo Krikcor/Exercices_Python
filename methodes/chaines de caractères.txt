@@ -1,0 +1,60 @@
+len(): Renvoie la longueur d'une chaîne.
+len("Bonjour")  # 7
+
+str.lower(): Convertit tous les caractères d'une chaîne en minuscules.
+"BONJOUR".lower()  # "bonjour"
+
+str.upper(): Convertit tous les caractères d'une chaîne en majuscules.
+"bonjour".upper()  # "BONJOUR"
+
+str.strip(): Supprime les espaces au début et à la fin d'une chaîne.
+"  bonjour  ".strip()  # "bonjour"
+
+str.replace(old, new): Remplace toutes les occurrences d'une sous-chaîne par une autre.
+"bonjour monde".replace("monde", "tout le monde")  # "bonjour tout le monde"
+
+str.split(separator): Divise une chaîne en une liste de sous-chaînes en utilisant un séparateur.
+"bonjour tout le monde".split(" ")  # ["bonjour", "tout", "le", "monde"]
+
+str.join(iterable): Concatène une liste de chaînes en une seule chaîne, en utilisant une chaîne comme séparateur.
+" ".join(["bonjour", "tout", "le", "monde"])  # "bonjour tout le monde"
+
+str.find(sub): Renvoie l'index de la première occurrence d'une sous-chaîne. Renvoie -1 si la sous-chaîne n'est pas trouvée.
+"bonjour".find("jour")  # 3
+
+str.startswith(prefix): Vérifie si une chaîne commence par un préfixe donné.
+"bonjour".startswith("bon")  # True
+
+str.endswith(suffix): Vérifie si une chaîne se termine par un suffixe donné.
+"bonjour".endswith("jour")  # True
+
+str.count(sub): Compte le nombre d'occurrences d'une sous-chaîne dans une chaîne.
+"bonjour bonjour".count("jour")  # 2
+
+str.capitalize(): Met en majuscule le premier caractère d'une chaîne et en minuscule tous les autres.
+"bonjour".capitalize()  # "Bonjour"
+
+str.title(): Met en majuscule le premier caractère de chaque mot dans une chaîne.
+"bonjour tout le monde".title()  # "Bonjour Tout Le Monde"
+
+str.isdigit(): Vérifie si tous les caractères d'une chaîne sont des chiffres.
+"12345".isdigit()  # True
+
+str.isalpha(): Vérifie si tous les caractères d'une chaîne sont des lettres.
+"bonjour".isalpha()  # True
+
+str.isalnum(): Vérifie si tous les caractères d'une chaîne sont des lettres ou des chiffres.
+"bonjour123".isalnum()  # True
+
+str.isspace(): Vérifie si tous les caractères d'une chaîne sont des espaces.
+"   ".isspace()  # True
+
+str.swapcase(): Inverse la casse de tous les caractères d'une chaîne.
+"Bonjour".swapcase()  # "bONJOUR"
+
+str.zfill(width): Remplit une chaîne avec des zéros à gauche pour atteindre une largeur spécifiée.
+"42".zfill(5)  # "00042"
+
+
+str.ljust(width, fillchar): Justifie une chaîne à gauche en utilisant un caractère de remplissage pour atteindre une largeur spécifiée.
+"bonjour".ljust(10, '*')  # "bonjour***"

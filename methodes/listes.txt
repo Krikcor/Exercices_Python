@@ -1,0 +1,84 @@
+len(): Renvoie la longueur d'une liste.
+len([1, 2, 3])  # 3
+
+append(): Ajoute un élément à la fin d'une liste.
+ma_liste = [1, 2, 3]
+ma_liste.append(4)  # [1, 2, 3, 4]
+
+extend(): Ajoute tous les éléments d'une autre liste à la fin de la liste actuelle.
+ma_liste = [1, 2, 3]
+ma_liste.extend([4, 5])  # [1, 2, 3, 4, 5]
+
+insert(): Insère un élément à une position spécifiée.
+ma_liste = [1, 2, 3]
+ma_liste.insert(1, 1.5)  # [1, 1.5, 2, 3]
+
+remove(): Supprime la première occurrence d'un élément.
+ma_liste = [1, 2, 3, 2]
+ma_liste.remove(2)  # [1, 3, 2]
+
+pop(): Supprime et renvoie l'élément à une position spécifiée (par défaut, le dernier élément).
+ma_liste = [1, 2, 3]
+ma_liste.pop()  # 3, ma_liste devient [1, 2]
+
+clear(): Supprime tous les éléments de la liste.
+ma_liste = [1, 2, 3]
+ma_liste.clear()  # []
+
+index(): Renvoie l'index de la première occurrence d'un élément.
+ma_liste = [1, 2, 3]
+ma_liste.index(2)  # 1
+
+count(): Renvoie le nombre d'occurrences d'un élément.
+ma_liste = [1, 2, 2, 3]
+ma_liste.count(2)  # 2
+
+sort(): Trie les éléments de la liste en place.
+ma_liste = [3, 1, 2]
+ma_liste.sort()  # [1, 2, 3]
+
+reverse(): Inverse l'ordre des éléments de la liste en place.
+ma_liste = [1, 2, 3]
+ma_liste.reverse()  # [3, 2, 1]
+
+copy(): Renvoie une copie superficielle de la liste.
+ma_liste = [1, 2, 3]
+nouvelle_liste = ma_liste.copy()  # [1, 2, 3]
+
+list(): Convertit un itérable en liste.
+ma_chaine = "123"
+ma_liste = list(ma_chaine)  # ['1', '2', '3']
+
+enumerate(): Renvoie un itérateur qui produit des tuples contenant un index et l'élément correspondant de la liste.
+ma_liste = ['a', 'b', 'c']
+for index, valeur in enumerate(ma_liste):
+    print(index, valeur)
+# 0 a
+# 1 b
+# 2 c
+
+zip(): Combine plusieurs itérables en un itérateur de tuples.
+liste1 = [1, 2, 3]
+liste2 = ['a', 'b', 'c']
+for item in zip(liste1, liste2):
+    print(item)
+# (1, 'a')
+# (2, 'b')
+# (3, 'c')
+
+map(): Applique une fonction à tous les éléments d'un itérable.
+ma_liste = [1, 2, 3]
+nouvelle_liste = list(map(lambda x: x * 2, ma_liste))  # [2, 4, 6]
+
+filter(): Filtre les éléments d'un itérable en fonction d'une fonction.
+ma_liste = [1, 2, 3, 4]
+nouvelle_liste = list(filter(lambda x: x % 2 == 0, ma_liste))  # [2, 4]
+
+reduce(): Applique une fonction cumulativement aux éléments d'un itérable pour les réduire à une seule valeur (nécessite functools).
+from functools import reduce
+ma_liste = [1, 2, 3, 4]
+resultat = reduce(lambda x, y: x + y, ma_liste)  # 10
+
+any(): Renvoie True si au moins un élément de l'itérable est vrai.
+ma_liste = [0, 1, 2]
+any(ma_liste)  # True

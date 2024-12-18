@@ -1,0 +1,68 @@
+len(): Renvoie la longueur d'un tuple.
+len((1, 2, 3))  # 3
+
+max(): Renvoie l'élément le plus grand d'un tuple.
+max((1, 2, 3))  # 3
+
+min(): Renvoie l'élément le plus petit d'un tuple.
+min((1, 2, 3))  # 1
+
+sum(): Renvoie la somme des éléments d'un tuple.
+sum((1, 2, 3))  # 6
+
+tuple(): Convertit un itérable en tuple.
+tuple([1, 2, 3])  # (1, 2, 3)
+
+count(): Renvoie le nombre d'occurrences d'un élément dans un tuple.
+(1, 2, 2, 3).count(2)  # 2
+
+index(): Renvoie l'index de la première occurrence d'un élément dans un tuple.
+(1, 2, 3).index(2)  # 1
+
+all(): Renvoie True si tous les éléments du tuple sont vrais.
+all((1, 2, 3))  # True
+
+any(): Renvoie True si au moins un élément du tuple est vrai.
+any((0, 1, 2))  # True
+
+sorted(): Renvoie une liste triée des éléments du tuple.
+sorted((3, 1, 2))  # [1, 2, 3]
+
+reversed(): Renvoie un itérateur qui parcourt le tuple en sens inverse.
+list(reversed((1, 2, 3)))  # [3, 2, 1]
+
+zip(): Combine plusieurs itérables en un itérateur de tuples.
+tuple1 = (1, 2, 3)
+tuple2 = ('a', 'b', 'c')
+list(zip(tuple1, tuple2))  # [(1, 'a'), (2, 'b'), (3, 'c')]
+
+enumerate(): Renvoie un itérateur qui produit des tuples contenant un index et l'élément correspondant du tuple.
+tuple1 = ('a', 'b', 'c')
+list(enumerate(tuple1))  # [(0, 'a'), (1, 'b'), (2, 'c')]
+
+map(): Applique une fonction à tous les éléments d'un itérable.
+tuple1 = (1, 2, 3)
+tuple2 = tuple(map(lambda x: x * 2, tuple1))  # (2, 4, 6)
+
+filter(): Filtre les éléments d'un itérable en fonction d'une fonction.
+tuple1 = (1, 2, 3, 4)
+tuple2 = tuple(filter(lambda x: x % 2 == 0, tuple1))  # (2, 4)
+
+reduce(): Applique une fonction cumulativement aux éléments d'un itérable pour les réduire à une seule valeur (nécessite functools).
+from functools import reduce
+tuple1 = (1, 2, 3, 4)
+resultat = reduce(lambda x, y: x + y, tuple1)  # 10
+
+tuple comprehension: Crée un tuple en utilisant une compréhension de liste.
+tuple1 = tuple(x * 2 for x in (1, 2, 3))  # (2, 4, 6)
+
+in: Vérifie si un élément est dans un tuple.
+2 in (1, 2, 3)  # True
+
+not in: Vérifie si un élément n'est pas dans un tuple.
+4 not in (1, 2, 3)  # True
+
+tuple slicing: Accède à une partie d'un tuple en utilisant la notation de tranchage.
+tuple1 = (1, 2, 3, 4, 5)
+tuple2 = tuple1[1:4]  # (2, 3, 4)
+

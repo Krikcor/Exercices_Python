@@ -1,0 +1,78 @@
+len(): Renvoie le nombre d'éléments dans un dictionnaire.
+len({"a": 1, "b": 2})  # 2
+
+keys(): Renvoie une vue des clés du dictionnaire.
+d = {"a": 1, "b": 2}
+d.keys()  # dict_keys(['a', 'b'])
+
+values(): Renvoie une vue des valeurs du dictionnaire.
+d = {"a": 1, "b": 2}
+d.values()  # dict_values([1, 2])
+
+items(): Renvoie une vue des paires clé-valeur du dictionnaire.
+d = {"a": 1, "b": 2}
+d.items()  # dict_items([('a', 1), ('b', 2)])
+
+get(): Renvoie la valeur associée à une clé, ou une valeur par défaut si la clé n'existe pas.
+d = {"a": 1, "b": 2}
+d.get("a")  # 1
+d.get("c", 0)  # 0
+
+pop(): Supprime une clé et renvoie sa valeur.
+d = {"a": 1, "b": 2}
+d.pop("a")  # 1, d devient {"b": 2}
+
+popitem(): Supprime et renvoie la dernière paire clé-valeur.
+d = {"a": 1, "b": 2}
+d.popitem()  # ('b', 2), d devient {"a": 1}
+
+clear(): Supprime tous les éléments du dictionnaire.
+d = {"a": 1, "b": 2}
+d.clear()  # {}
+
+update(): Met à jour le dictionnaire avec les paires clé-valeur d'un autre dictionnaire ou d'un itérable de paires clé-valeur.
+d = {"a": 1}
+d.update({"b": 2, "c": 3})  # {"a": 1, "b": 2, "c": 3}
+
+setdefault(): Renvoie la valeur associée à une clé, ou ajoute la clé avec une valeur par défaut si elle n'existe pas.
+d = {"a": 1}
+d.setdefault("b", 2)  # 2, d devient {"a": 1, "b": 2}
+
+copy(): Renvoie une copie superficielle du dictionnaire.
+d = {"a": 1, "b": 2}
+d_copy = d.copy()  # {"a": 1, "b": 2}
+
+fromkeys(): Crée un nouveau dictionnaire avec des clés d'un itérable et une valeur par défaut.
+keys = ["a", "b", "c"]
+d = dict.fromkeys(keys, 0)  # {"a": 0, "b": 0, "c": 0}
+
+in: Vérifie si une clé est dans le dictionnaire.
+d = {"a": 1, "b": 2}
+"a" in d  # True
+
+not in: Vérifie si une clé n'est pas dans le dictionnaire.
+d = {"a": 1, "b": 2}
+"c" not in d  # True
+
+dict comprehension: Crée un dictionnaire en utilisant une compréhension de liste.
+d = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+del: Supprime une clé du dictionnaire.
+d = {"a": 1, "b": 2}
+del d["a"]  # d devient {"b": 2}
+
+dict(): Crée un dictionnaire à partir d'un itérable de paires clé-valeur.
+d = dict([("a", 1), ("b", 2)])  # {"a": 1, "b": 2}
+
+sorted(): Renvoie une liste triée des clés du dictionnaire.
+d = {"b": 2, "a": 1}
+sorted(d)  # ["a", "b"]
+
+reversed(): Renvoie un itérateur qui parcourt les clés du dictionnaire en sens inverse.
+d = {"a": 1, "b": 2}
+list(reversed(d))  # ["b", "a"]
+
+enumerate(): Renvoie un itérateur qui produit des tuples contenant un index et la clé correspondante du dictionnaire.
+d = {"a": 1, "b": 2}
+list(enumerate(d))  # [(0, "a"), (1, "b")]
+
